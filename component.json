@@ -1,12 +1,9 @@
 {
   "name": "utils-size",
   "repo": "suitcss/utils-size",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "styles": [
-    "size.css",
-    "size-sm.css",
-    "size-md.css",
-    "size-lg.css"
+    "size.css"
   ],
   "development": {
     "suitcss/components-test": "*"

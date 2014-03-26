@@ -1,5 +1,14 @@
 === HEAD
 
+=== 0.6.2 (March 26, 2014)
+
+* Remove MQ files from component.json.
+* Add `files` to package.json.
+
+=== 0.6.1 (March 25, 2014)
+
+* Use `calc()` to improve precision of recurring decimals.
+
 === 0.6.0 (March 25, 2014)
 
 * Change media query naming convention to `u-sm-*`, `u-md-*`, `u-lg-*`.
