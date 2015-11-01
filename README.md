@@ -2,24 +2,19 @@
 
 [![Build Status](https://secure.travis-ci.org/suitcss/utils-size.png?branch=master)](http://travis-ci.org/suitcss/utils-size)
 
-SUIT CSS sizing utilities.
+SUIT CSS sizing utilities. Sets `width` and `flex-basis`.
 
 Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/).
 
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-size`
-* [Component(1)](http://component.io/): `component install suitcss/utils-size`
-* [Bower](http://bower.io/): `bower install suit-utils-size`
 * Download: [zip](https://github.com/suitcss/utils-size/zipball/master)
 
 ## Available classes
 
-* `u-sizeFit` - Make an element shrink wrap its content by floating left.
-* `u-sizeFitAlt` - Make an element shrink wrap its content by floating right.
-* `u-sizeFill` - Make an element fill the remaining space.
-* `u-sizeFillAlt` - An alternative method to make an element fill the remaining space.
 * `u-sizeFull` - Make an element the width of its parent.
+* `u-sizeFill` - Make an element fill the remaining space.
 * `u-sizeXofY` (numerous) - Specify the proportional width of an object.
 
 `X` must be an integer less than `Y`.
@@ -42,8 +37,14 @@ There are 3 Media Query breakpoints:
 * `--md-viewport`
 * `--lg-viewport`
 
-When using the [SUIT CSS preprocessor](https://github.com/suitcss/preprocessor),
+When using [postcss-custom-media](https://github.com/postcss/postcss-custom-media),
 breakpoints can be configured using `@custom-media`. For example:
+
+```css
+@custom-media --sm-viewport (min-width:320px) and (max-width:640px);
+@custom-media --md-viewport (min-width:640px) and (max-width:960px);
+@custom-media --lg-viewport (min-width:960px);
+```
 
 ## Usage
 
@@ -69,12 +70,21 @@ To generate the testing build.
 npm run build-test
 ```
 
+To watch the files for making changes to test:
+
+```
+npm run watch
+```
+
 Basic visual tests are in `test/index.html`.
 
 ## Browser support
 
+Refer to the [caniuse](http://caniuse.com/) page for [flexbox](http://caniuse.com/#feat=flexbox).
+This package can still be used in older browsers if `width` is required
+
 * Google Chrome (latest)
 * Opera (latest)
-* Firefox 4+
-* Safari 5+
-* Internet Explorer 8+
+* Firefox 28+
+* Safari 6.1+
+* Internet Explorer 10+
