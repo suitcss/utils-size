@@ -9,12 +9,13 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 ## Installation
 
 * [npm](http://npmjs.org/): `npm install suitcss-utils-size`
-* Download: [zip](https://github.com/suitcss/utils-size/zipball/master)
+* Download: [zip](https://github.com/suitcss/utils-size/releases/latest)
 
 ## Available classes
 
 * `u-sizeFull` - Make an element the width of its parent.
-* `u-sizeFill` - Make an element fill the remaining space.
+* `u-sizeFill` - Make an element fill the remaining space. Distribute space evenly on multiple elements.
+* `u-sizeFillAlt` - An alternative method to make an element fill the remaining space. Distribute space based on element width.
 * `u-sizeXofY` (numerous) - Specify the proportional width of an object.
 
 `X` must be an integer less than `Y`.
