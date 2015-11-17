@@ -15,13 +15,6 @@
     margin: 0 0 10px;
   }
 
-  .u-flexStart {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-
   .u-fullWidthFlex {
     -webkit-box-flex: 0;
       -webkit-flex: 0 0 100%;
@@ -39,12 +32,76 @@
 <div class="Test">
   <h1 class="Test-title">SUIT CSS: <a href="https://github.com/suitcss/utils-size">sizing utility</a> tests</h1>
 
-  <h2 class="Test-describe">.u-sizeFill</h2>
+  <h2 class="Test-describe">.u-sizeFill / .u-sizeFillAlt</h2>
   <h3 class="Test-it">fills remaining space</h3>
   <div class="Test-run">
-    <div class="u-flex u-flexStart">
+    <div class="u-flex">
       <div class="dev-Box"></div>
       <div class="u-sizeFill u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeFill</h2>
+  <h3 class="Test-it">distributes space evenly</h3>
+  <div class="Test-run" style="margin-bottom: 15px">
+    <div class="u-flex">
+      <div class="u-sizeFill u-highlight">
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      </div>
+      <div class="u-sizeFill u-highlight">
+        content
+      </div>
+      <div class="u-sizeFill u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="dev-Box"></div>
+      <div class="u-sizeFill u-highlight">
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      </div>
+     <div class="u-sizeFill u-highlight">
+        content
+      </div>
+      <div class="u-sizeFill u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-sizeFillAlt</h2>
+  <h3 class="Test-it">distributes space based on initial width of item</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="u-sizeFillAlt u-highlight">
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros. Lorem ipsum dolor sit amet.
+      </div>
+      <div class="u-sizeFillAlt u-highlight">
+        content
+      </div>
+      <div class="u-sizeFillAlt u-highlight">
+        content
+      </div>
+    </div>
+  </div>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="dev-Box"></div>
+      <div class="u-sizeFillAlt u-highlight">
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      </div>
+     <div class="u-sizeFillAlt u-highlight">
+        content
+      </div>
+      <div class="u-sizeFillAlt u-highlight">
         content
       </div>
     </div>
