@@ -1,4 +1,4 @@
-/** @define Test; use strict */
+/** @define Test */
 
 /**
  * The 'describe' CSS counter
@@ -8,7 +8,7 @@
   counter-reset: test-describe;
 }
 
-.Test-describe:before {
+.Test-describe::before {
   content: counter(test-describe);
   counter-increment: test-describe;
 }
@@ -21,7 +21,7 @@
   counter-reset: test-it;
 }
 
-.Test-it:before {
+.Test-it::before {
   content: counter(test-describe) "." counter(test-it);
   counter-increment: test-it;
 }
@@ -31,12 +31,12 @@
  */
 
 .Test-title {
-  font-size: 2em;
-  font-family: sans-serif;
-  padding: 20px;
-  margin: 20px 0;
   background: #eee;
   color: #999;
+  font-family: sans-serif;
+  font-size: 2em;
+  margin: 20px 0;
+  padding: 20px;
 }
 
 /**
@@ -63,15 +63,17 @@
  * The counter styles
  */
 
-.Test-describe:before,
-.Test-it:before {
+.Test-describe::before,
+.Test-it::before {
   color: #999;
   display: inline-block;
   margin-right: 10px;
   min-width: 30px;
   text-transform: uppercase;
 }
+
 /**
+ * @define utilities
  * Display-type utilities
  */
 
@@ -83,32 +85,18 @@
   display: none !important;
 }
 
-.u-flex {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
-.u-inlineFlex {
-  display: -webkit-inline-box !important;
-  display: -webkit-inline-flex !important;
-  display: -ms-inline-flexbox !important;
-  display: inline-flex !important;
-}
-
 /**
  * Completely remove from the flow but leave available to screen readers.
  */
 
 .u-hiddenVisually {
-  position: absolute !important;
-  overflow: hidden !important;
-  width: 1px !important;
-  height: 1px !important;
-  padding: 0 !important;
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
 }
 
 .u-inline {
@@ -137,6 +125,7 @@
 .u-tableRow {
   display: table-row !important;
 }
+
 /**
  * @define utilities
  * Sizing utilities
@@ -154,61 +143,87 @@
  *    http://git.io/vllMD
  */
 
-/* postcss-bem-linter: ignore */
-[class*="u-size"] {
+.u-size1of12 {
   -webkit-flex-basis: auto !important;
       -ms-flex-preferred-size: auto !important;
-          flex-basis: auto !important; /* 1 */
-}
-
-.u-size1of12 {
+          flex-basis: auto !important;
   width: 8.33333% !important;
 }
 
 .u-size1of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 10% !important;
 }
 
 .u-size1of8 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 12.5% !important;
 }
 
 .u-size1of6,
 .u-size2of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 16.66667% !important;
 }
 
 .u-size1of5,
 .u-size2of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 20% !important;
 }
 
 .u-size1of4,
 .u-size2of8,
 .u-size3of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 25% !important;
 }
 
 .u-size3of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 30% !important;
 }
 
 .u-size1of3,
 .u-size2of6,
 .u-size4of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 33.33333% !important;
 }
 
 .u-size3of8 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 37.5% !important;
 }
 
 .u-size2of5,
 .u-size4of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 40% !important;
 }
 
 .u-size5of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 41.66667% !important;
 }
 
@@ -218,57 +233,93 @@
 .u-size4of8,
 .u-size5of10,
 .u-size6of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 50% !important;
 }
 
 .u-size7of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 58.33333% !important;
 }
 
 .u-size3of5,
 .u-size6of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 60% !important;
 }
 
 .u-size5of8 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 62.5% !important;
 }
 
 .u-size2of3,
 .u-size4of6,
 .u-size8of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 66.66667% !important;
 }
 
 .u-size7of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 70% !important;
 }
 
 .u-size3of4,
 .u-size6of8,
 .u-size9of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 75% !important;
 }
 
 .u-size4of5,
 .u-size8of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 80% !important;
 }
 
 .u-size5of6,
 .u-size10of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 83.33333% !important;
 }
 
 .u-size7of8 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 87.5% !important;
 }
 
 .u-size9of10 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 90% !important;
 }
 
 .u-size11of12 {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
   width: 91.66667% !important;
 }
 
@@ -276,10 +327,22 @@
    ========================================================================== */
 
 /**
+ * Make an element shrink wrap its content.
+ */
+
+.u-sizeFit {
+  -webkit-flex-basis: auto !important;
+      -ms-flex-preferred-size: auto !important;
+          flex-basis: auto !important;
+}
+
+/**
  * Make an element fill the remaining space.
  *
- * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
- * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+ * 1. Be explicit to work around IE10 bug with shorthand flex
+ *    http://git.io/vllC7
+ * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+ *    http://git.io/vllMt
  */
 
 .u-sizeFill {
@@ -318,6 +381,7 @@
   display: block !important;
   width: 100% !important;
 }
+
 /**
  * @define utilities
  * Size: breakpoint 1 (small)
@@ -326,7 +390,7 @@
 @media (min-width:320px) and (max-width:640px) {
 
   /* Proportional widths: breakpoint 1 (small)
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Specify the proportional width of an object.
@@ -337,61 +401,87 @@
    *    http://git.io/vllMD
    */
 
-  /* postcss-bem-linter: ignore */
-  [class*="u-sm-size"] {
+  .u-sm-size1of12 {
     -webkit-flex-basis: auto !important;
         -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important; /* 1 */
-  }
-
-  .u-sm-size1of12 {
+            flex-basis: auto !important;
     width: 8.33333% !important;
   }
 
   .u-sm-size1of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 10% !important;
   }
 
   .u-sm-size1of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 12.5% !important;
   }
 
   .u-sm-size1of6,
   .u-sm-size2of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 16.66667% !important;
   }
 
   .u-sm-size1of5,
   .u-sm-size2of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 20% !important;
   }
 
   .u-sm-size1of4,
   .u-sm-size2of8,
   .u-sm-size3of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 25% !important;
   }
 
   .u-sm-size3of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 30% !important;
   }
 
   .u-sm-size1of3,
   .u-sm-size2of6,
   .u-sm-size4of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 33.33333% !important;
   }
 
   .u-sm-size3of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 37.5% !important;
   }
 
   .u-sm-size2of5,
   .u-sm-size4of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 40% !important;
   }
 
   .u-sm-size5of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 41.66667% !important;
   }
 
@@ -401,68 +491,116 @@
   .u-sm-size4of8,
   .u-sm-size5of10,
   .u-sm-size6of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 50% !important;
   }
 
   .u-sm-size7of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 58.33333% !important;
   }
 
   .u-sm-size3of5,
   .u-sm-size6of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 60% !important;
   }
 
   .u-sm-size5of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 62.5% !important;
   }
 
   .u-sm-size2of3,
   .u-sm-size4of6,
   .u-sm-size8of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 66.66667% !important;
   }
 
   .u-sm-size7of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 70% !important;
   }
 
   .u-sm-size3of4,
   .u-sm-size6of8,
   .u-sm-size9of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 75% !important;
   }
 
   .u-sm-size4of5,
   .u-sm-size8of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 80% !important;
   }
 
   .u-sm-size5of6,
   .u-sm-size10of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 83.33333% !important;
   }
 
   .u-sm-size7of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 87.5% !important;
   }
 
   .u-sm-size9of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 90% !important;
   }
 
   .u-sm-size11of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 91.66667% !important;
   }
 
   /* Intrinsic widths
-     ========================================================================== */
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-sm-sizeFit {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
+  }
 
   /**
    * Make an element fill the remaining space.
    *
-   * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
-   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
    */
 
   .u-sm-sizeFill {
@@ -503,6 +641,7 @@
   }
 
 }
+
 /**
  * @define utilities
  * Size: breakpoint 2 (medium)
@@ -511,7 +650,7 @@
 @media (min-width:640px) and (max-width:960px) {
 
   /* Proportional widths: breakpoint 2 (medium)
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Specify the proportional width of an object.
@@ -523,60 +662,88 @@
    */
 
   /* postcss-bem-linter: ignore */
-  [class*="u-md-size"] {
-    -webkit-flex-basis: auto !important;
-        -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important; /* 1 */
-  }
 
   .u-md-size1of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 8.33333% !important;
   }
 
   .u-md-size1of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 10% !important;
   }
 
   .u-md-size1of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 12.5% !important;
   }
 
   .u-md-size1of6,
   .u-md-size2of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 16.66667% !important;
   }
 
   .u-md-size1of5,
   .u-md-size2of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 20% !important;
   }
 
   .u-md-size1of4,
   .u-md-size2of8,
   .u-md-size3of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 25% !important;
   }
 
   .u-md-size3of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 30% !important;
   }
 
   .u-md-size1of3,
   .u-md-size2of6,
   .u-md-size4of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 33.33333% !important;
   }
 
   .u-md-size3of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 37.5% !important;
   }
 
   .u-md-size2of5,
   .u-md-size4of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 40% !important;
   }
 
   .u-md-size5of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 41.66667% !important;
   }
 
@@ -586,68 +753,116 @@
   .u-md-size4of8,
   .u-md-size5of10,
   .u-md-size6of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 50% !important;
   }
 
   .u-md-size7of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 58.33333% !important;
   }
 
   .u-md-size3of5,
   .u-md-size6of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 60% !important;
   }
 
   .u-md-size5of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 62.5% !important;
   }
 
   .u-md-size2of3,
   .u-md-size4of6,
   .u-md-size8of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 66.66667% !important;
   }
 
   .u-md-size7of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 70% !important;
   }
 
   .u-md-size3of4,
   .u-md-size6of8,
   .u-md-size9of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 75% !important;
   }
 
   .u-md-size4of5,
   .u-md-size8of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 80% !important;
   }
 
   .u-md-size5of6,
   .u-md-size10of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 83.33333% !important;
   }
 
   .u-md-size7of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 87.5% !important;
   }
 
   .u-md-size9of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 90% !important;
   }
 
   .u-md-size11of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 91.66667% !important;
   }
 
   /* Intrinsic widths
-     ========================================================================== */
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-md-sizeFit {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
+  }
 
   /**
    * Make an element fill the remaining space.
    *
-   * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
-   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
    */
 
   .u-md-sizeFill {
@@ -688,6 +903,7 @@
   }
 
 }
+
 /**
  * @define utilities
  * Size: breakpoint 3 (large)
@@ -696,7 +912,7 @@
 @media (min-width:960px) {
 
   /* Proportional widths: breakpoint 3 (large)
-     ========================================================================== */
+     ======================================================================== */
 
   /**
    * Specify the proportional width of an object.
@@ -707,61 +923,87 @@
    *    http://git.io/vllMD
    */
 
-  /* postcss-bem-linter: ignore */
-  [class*="u-lg-size"] {
+  .u-lg-size1of12 {
     -webkit-flex-basis: auto !important;
         -ms-flex-preferred-size: auto !important;
-            flex-basis: auto !important; /* 1 */
-  }
-
-  .u-lg-size1of12 {
+            flex-basis: auto !important;
     width: 8.33333% !important;
   }
 
   .u-lg-size1of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 10% !important;
   }
 
   .u-lg-size1of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 12.5% !important;
   }
 
   .u-lg-size1of6,
   .u-lg-size2of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 16.66667% !important;
   }
 
   .u-lg-size1of5,
   .u-lg-size2of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 20% !important;
   }
 
   .u-lg-size1of4,
   .u-lg-size2of8,
   .u-lg-size3of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 25% !important;
   }
 
   .u-lg-size3of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 30% !important;
   }
 
   .u-lg-size1of3,
   .u-lg-size2of6,
   .u-lg-size4of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 33.33333% !important;
   }
 
   .u-lg-size3of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 37.5% !important;
   }
 
   .u-lg-size2of5,
   .u-lg-size4of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 40% !important;
   }
 
   .u-lg-size5of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 41.66667% !important;
   }
 
@@ -771,68 +1013,116 @@
   .u-lg-size4of8,
   .u-lg-size5of10,
   .u-lg-size6of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 50% !important;
   }
 
   .u-lg-size7of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 58.33333% !important;
   }
 
   .u-lg-size3of5,
   .u-lg-size6of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 60% !important;
   }
 
   .u-lg-size5of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 62.5% !important;
   }
 
   .u-lg-size2of3,
   .u-lg-size4of6,
   .u-lg-size8of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 66.66667% !important;
   }
 
   .u-lg-size7of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 70% !important;
   }
 
   .u-lg-size3of4,
   .u-lg-size6of8,
   .u-lg-size9of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 75% !important;
   }
 
   .u-lg-size4of5,
   .u-lg-size8of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 80% !important;
   }
 
   .u-lg-size5of6,
   .u-lg-size10of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 83.33333% !important;
   }
 
   .u-lg-size7of8 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 87.5% !important;
   }
 
   .u-lg-size9of10 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 90% !important;
   }
 
   .u-lg-size11of12 {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
     width: 91.66667% !important;
   }
 
   /* Intrinsic widths
-     ========================================================================== */
+     ======================================================================== */
+
+  /**
+   * Make an element shrink wrap its content.
+   */
+
+  .u-lg-sizeFit {
+    -webkit-flex-basis: auto !important;
+        -ms-flex-preferred-size: auto !important;
+            flex-basis: auto !important;
+  }
 
   /**
    * Make an element fill the remaining space.
    *
-   * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
-   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+   * 1. Be explicit to work around IE10 bug with shorthand flex
+   *    http://git.io/vllC7
+   * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes
+   *    http://git.io/vllMt
    */
 
   .u-lg-sizeFill {
@@ -873,3 +1163,4 @@
   }
 
 }
+
