@@ -1,6 +1,6 @@
 # SUIT CSS utilities: size
 
-[![Build Status](https://secure.travis-ci.org/suitcss/utils-size.png?branch=master)](http://travis-ci.org/suitcss/utils-size)
+[![Build Status](https://travis-ci.org/suitcss/utils-size.svg?branch=master)](https://travis-ci.org/suitcss/utils-size)
 
 SUIT CSS sizing utilities. Sets `width` and `flex-basis`.
 
@@ -13,6 +13,7 @@ Read more about [SUIT CSS's design principles](https://github.com/suitcss/suit/)
 
 ## Available classes
 
+* `u-sizeFit` - Make an element shrink wrap its content with `flex-basis`.
 * `u-sizeFull` - Make an element the width of its parent.
 * `u-sizeFill` - Make an element fill the remaining space. Distribute space evenly on multiple elements.
 * `u-sizeFillAlt` - An alternative method to make an element fill the remaining space. Distribute space based on element width.
@@ -69,6 +70,12 @@ To generate the testing build.
 
 ```
 npm run build-test
+```
+
+To lint code with [postcss-bem-linter](https://github.com/postcss/postcss-bem-linter) and [stylelint](http://stylelint.io/)
+
+```
+npm run lint
 ```
 
 To watch the files for making changes to test:
