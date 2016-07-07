@@ -192,6 +192,5 @@
 
 .u-sizeFull {
   box-sizing: border-box !important;
-  display: block !important;
   width: 100% !important;
 }

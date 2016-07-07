@@ -116,10 +116,29 @@
   <h2 class="Test-describe">.u-sizeFull</h2>
   <h3 class="Test-it">fits the full-width of the container</h3>
   <div class="Test-run">
-    <div class="u-sizeFull u-highlight" style="border:10px solid red;">
+    <div class="u-sizeFull u-highlight">
       content
     </div>
   </div>
+  <div class="Test-run">
+    <h3 class="Test-it">fits the full-width of the container when combined with u-flex</h3>
+    <span class="u-flex u-sizeFull u-highlight">
+      <span class="u-sizeFit">
+        <div class="dev-Box"></div>
+      </span>
+      <span class="u-sizeFillAlt u-highlight">
+        Lorem ipsum dolor sit amet, probo option similique vix te, ei summo
+        aliquip nec. Atqui diceret ceteros.
+      </span>
+    </span>
+  </div>
+  <div class="Test-run">
+    <h3 class="Test-it">Does not exceed the width of the container, regardless of padding.</h3>
+    <div class="u-sizeFull u-highlight" style="padding-left: 100px;">
+      content
+    </div>
+  </div>
+
 
   <h2 class="Test-describe">.u-sizeXof2</h2>
   <h3 class="Test-it">sizes to 1/2 of the parent container</h3>
