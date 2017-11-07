@@ -9,6 +9,10 @@
     margin: 0 0 10px;
   }
 
+  html {
+    box-sizing: border-box;
+  }
+
   .u-flex {
     display: -webkit-flex !important;
     display: -ms-flexbox !important;
@@ -41,6 +45,30 @@
       </div>
       <div class="u-sizeFill u-highlight">
         content
+      </div>
+    </div>
+  </div>
+
+  <h2 class="Test-describe">.u-[size]-sizeFit</h2>
+  <h3 class="Test-it">overrides u-sizeFit correctly</h3>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="u-size1of2 u-sm-sizeFit u-highlight">
+        should sizeFit at sm-viewport
+      </div>
+    </div>
+  </div>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="u-size1of2 u-md-sizeFit u-highlight">
+        should sizeFit at md-viewport
+      </div>
+    </div>
+  </div>
+  <div class="Test-run">
+    <div class="u-flex">
+      <div class="u-size1of2 u-lg-sizeFit u-highlight">
+        should sizeFit at lg-viewport
       </div>
     </div>
   </div>

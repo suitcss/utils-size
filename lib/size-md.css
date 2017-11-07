@@ -162,6 +162,7 @@
 
   .u-md-sizeFit {
     flex-basis: auto !important;
+    width: auto !important;
   }
 
   /**
@@ -195,8 +196,6 @@
    */
 
   .u-md-sizeFull {
-    box-sizing: border-box !important;
-    display: block !important;
     width: 100% !important;
   }
 
